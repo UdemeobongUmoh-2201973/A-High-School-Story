@@ -15,24 +15,26 @@ Each scene has its own string_id and method.
 For instance, the home scene has an id "home" and method home_scene(self).
 
 FORMAT:
-def demo_scene(self):
-    self.current_scene = "scene_id"
-
-    # In-scene variables and objects
-
-    while self.app and self.current_scene == "scene_id":
-        # drawing functions
-
-        pygame.display.update()
-        Clock.tick(FPS)
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                self.app = False
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                # code
-            elif event.type == pygame.KEYDOWN:
-                self.current_scene = "new_scene_id"    # this is to change to a different scene
+# Code to be used...
+    
+    def demo_scene(self):
+        self.current_scene = "scene_id"
+    
+        # In-scene variables and objects
+    
+        while self.app and self.current_scene == "scene_id":
+            # drawing functions
+    
+            pygame.display.update()
+            Clock.tick(FPS)
+    
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.app = False
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    # code
+                elif event.type == pygame.KEYDOWN:
+                    self.current_scene = "new_scene_id"    # this is to change to a different scene
 
 Note:
 When creating a scene, make sure to:
